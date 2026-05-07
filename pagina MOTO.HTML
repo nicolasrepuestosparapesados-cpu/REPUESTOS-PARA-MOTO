@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NS Repuestos | Pulsar NS 200</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #ff6600);
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd000;
+    }
+
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 52px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #ff6600;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #e95c00;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .price {
+      color: #ff6600;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 12px 0;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .about-text h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+      border-radius: 20px;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NS Repuestos</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h2>Repuestos Originales para Pulsar NS 200</h2>
+      <p>Encuentra accesorios, partes mecánicas y repuestos de alta calidad para tu motocicleta Pulsar NS 200.</p>
+      <a href="#productos" class="btn">Ver Productos</a>
+    </div>
+  </section>
+
+  <section id="productos">
+    <div class="section-title">
+      <h2>Productos Destacados</h2>
+      <p>Los mejores repuestos para mantener tu NS 200 al máximo nivel.</p>
+    </div>
+
+    <div class="products">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517846693594-1567da72af75?q=80&w=1470&auto=format&fit=crop" alt="Pastillas de freno">
+        <div class="card-content">
+          <h3>Pastillas de Freno NS 200</h3>
+          <p>Alta duración y excelente frenado para mayor seguridad.</p>
+          <div class="price">$85.000 COP</div>
+          <a href="#contacto" class="btn">Comprar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1470&auto=format&fit=crop" alt="Kit arrastre">
+        <div class="card-content">
+          <h3>Kit de Arrastre</h3>
+          <p>Cadena reforzada y piñones de máxima resistencia.</p>
+          <div class="price">$210.000 COP</div>
+          <a href="#contacto" class="btn">Comprar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1470&auto=format&fit=crop" alt="Espejos deportivos">
+        <div class="card-content">
+          <h3>Espejos Deportivos</h3>
+          <p>Diseño moderno y excelente visibilidad para tu moto.</p>
+          <div class="price">$65.000 COP</div>
+          <a href="#contacto" class="btn">Comprar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1470&auto=format&fit=crop" alt="Farola led">
+        <div class="card-content">
+          <h3>Farola LED NS 200</h3>
+          <p>Mayor iluminación y estilo agresivo para tu Pulsar.</p>
+          <div class="price">$180.000 COP</div>
+          <a href="#contacto" class="btn">Comprar</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=1470&auto=format&fit=crop" alt="Moto taller">
+
+      <div class="about-text">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          Somos una tienda especializada en repuestos y accesorios para la línea Pulsar NS 200.
+          Nuestro objetivo es ofrecer productos de calidad, excelente atención y precios competitivos.
+        </p>
+
+        <p>
+          Trabajamos con marcas reconocidas y garantizamos la mejor experiencia para los amantes de las motos deportivas.
+        </p>
+
+        <a href="#contacto" class="btn">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="contact">
+      <h2>Contáctanos</h2>
+      <p>?? Bogotá, Colombia</p>
+      <p>?? +57 300 782 4306</p>
+      <p>?? ventas@nsrepuestos.com</p>
+      <br>
+      <a href="https://wa.me/573000000000" target="_blank" class="btn">Escribir por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 NS Repuestos - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
